@@ -1,0 +1,31 @@
+# Credentials & secrets
+.env
+.env.local
+.env.*.local
+Important Document/Passowrd/
+**/Passowrd/
+*.env
+.env.*
+!.env.example
+
+# Backend
+Backend/venv/
+Backend/__pycache__/
+Backend/**/__pycache__/
+Backend/media/
+Backend/*.sqlite3
+Backend/.env
+
+# Frontend
+FrontEnd/node_modules/
+FrontEnd/freshbazaar/node_modules/
+FrontEnd/freshbazaar/.next/
+FrontEnd/**/.next/
+FrontEnd/freshbazaar/.env*
+FrontEnd/**/.env*
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+*.log

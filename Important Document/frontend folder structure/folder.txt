@@ -1,0 +1,75 @@
+src/
+├── app/                          ← Next.js pages (routes)
+│   ├── (auth)/                   ← grouped route - no URL prefix
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   └── register/
+│   │       └── page.tsx
+│   ├── (customer)/               ← customer-facing pages
+│   │   ├── shops/
+│   │   │   ├── page.tsx          ← /shops
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx      ← /shops/moms-meat-shop
+│   │   ├── cart/
+│   │   │   └── page.tsx
+│   │   ├── checkout/
+│   │   │   └── page.tsx
+│   │   └── orders/
+│   │       ├── page.tsx          ← order history
+│   │       └── [id]/
+│   │           └── page.tsx      ← order detail
+│   ├── (shop-owner)/             ← shop owner dashboard
+│   │   └── dashboard/
+│   │       ├── page.tsx          ← incoming orders
+│   │       ├── products/
+│   │       │   └── page.tsx      ← manage products
+│   │       └── settings/
+│   │           └── page.tsx      ← shop settings
+│   ├── layout.tsx
+│   └── page.tsx                  ← landing page
+│
+├── components/                   ← reusable UI components
+│   ├── ui/                       ← generic components
+│   │   ├── Button.tsx
+│   │   ├── Input.tsx
+│   │   ├── Badge.tsx
+│   │   └── Spinner.tsx
+│   ├── layout/                   ← layout components
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── Sidebar.tsx
+│   ├── shop/                     ← shop-specific components
+│   │   ├── ShopCard.tsx
+│   │   └── ShopList.tsx
+│   ├── product/                  ← product-specific components
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductList.tsx
+│   │   └── CutTypeSelector.tsx
+│   ├── cart/                     ← cart components
+│   │   ├── CartItem.tsx
+│   │   └── CartSummary.tsx
+│   └── order/                    ← order components
+│       ├── OrderCard.tsx
+│       └── OrderStatusBadge.tsx
+│
+├── lib/                          ← utilities and config
+│   ├── api.ts                    ← axios instance
+│   └── utils.ts                  ← helper functions
+│
+├── services/                     ← API call functions
+│   ├── authService.ts            ← login, register, me
+│   ├── shopService.ts            ← get shops, shop detail
+│   ├── productService.ts         ← get products, create
+│   ├── cartService.ts            ← cart operations
+│   └── orderService.ts           ← checkout, order list
+│
+├── store/                        ← global state (zustand)
+│   ├── authStore.ts              ← user, login state
+│   └── cartStore.ts              ← cart state
+│
+├── types/                        ← TypeScript interfaces
+│   └── index.ts                  ← User, Shop, Product, Order
+│
+└── hooks/                        ← custom React hooks
+    ├── useAuth.ts                ← auth helper hook
+    └── useCart.ts                ← cart helper hook
