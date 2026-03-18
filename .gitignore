@@ -1,12 +1,15 @@
 # Credentials & secrets
 .env
 .env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.docker.example
 Important Document/Passowrd/
 **/Passowrd/
 *.env
 .env.*
 !.env.example
+!.env.docker.example
 
 # Backend
 Backend/venv/
